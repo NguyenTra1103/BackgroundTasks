@@ -18,7 +18,7 @@ import retrofit2.Response;
 public class UserDetailActivity extends AppCompatActivity {
 private TextView txtView;
 private TextView txtName,txtEmail,txtGender,txtStatus;
-private Button btnDelete;
+private Button btnDelete,btnUpdate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +67,8 @@ private Button btnDelete;
 
                     }
                 });
+                Intent intent1 = new Intent(UserDetailActivity.this,MainActivity.class);
+                startActivity(intent1);
             }
         });
     }

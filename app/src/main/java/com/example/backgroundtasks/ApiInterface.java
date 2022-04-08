@@ -18,8 +18,8 @@ public interface ApiInterface {
     String token = "f7e5488940e369e2edf21409e99abd6951b8a66e53e2f236e7de528f306c83e2";
     @POST("users?access-token=" + token)
     Call<User> addUser(@Body() User user);
-    @PUT("users/{id}")
+    @PUT("users/{id}?access-token=" + token)
     Call<User> updateUser(@Path("id") int id ,@Body() User user);
-    @DELETE("users/{id}")
+    @DELETE("users/{id}?access-token=" + token)
     Call<User> deleteUser(@Path("id") int id);
 }
